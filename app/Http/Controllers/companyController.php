@@ -11,7 +11,7 @@ use App\User;
 use App\Office;
 use Storage;
 
-class companyController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
