@@ -5,12 +5,14 @@
     <link rel="stylesheet" type="text/css" href="/css/app.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
     <title>Dashboard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="content">
     <div class="container-fluid">
         <div class="">
-            <div class="row autoplay append">            
+            <div class="row autoplay append">
                  <!--<div class="col-md-3">
                      <div class="preview">
                         <img style="width:100%" src="https://pbs.twimg.com/profile_images/578289850757062656/s5QlgNgA.jpeg">
@@ -32,13 +34,13 @@
                                     </p>
                                 </div>
                             </div>
-                                
+
                          </div>
                      </div>
-                 </div>-->     
+                 </div>-->
             </div>
         </div>
-    </div>    
+    </div>
 </div>
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>

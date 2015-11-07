@@ -3,7 +3,7 @@ $(function () {
 
     var $companies = $('#companies');
     getCompanies();
-	
+
 
 });
 
@@ -14,8 +14,8 @@ function getCompanies(){
 		$.each(data.data, function(key, val){
 				console.log(data);
 				row += '<div class="col-md-3">';
-                row += '<div class="preview">';
-                    row += '<img style="width:100%" src="'+val.company_imageURL+'">';
+                row += '<div class="card">';
+                    row += '<img class="header-pic" src="'+val.company_imageURL+'">';
                     row += '<div class="info">';
                     row +=  '<h2>'+val.name+'</h2>';
                        row += '<p>';
@@ -26,29 +26,29 @@ function getCompanies(){
 
                         $.each(val.users,function(k, v){
                         	row += '<div class="row user">';
-	                        	row += '<div class="col-md-3">';
+	                        	row += '<div class="col-xs-4">';
 	                                row += '<img class="pic" src="'+v.profile_image+'">';
-	                            row += '</div>';
+	                          row += '</div>';
 
-	                            row += '<div class="col-md-9 fact">';             
+	                            row += '<div class="col-xs-8 fact">';
 	                               row += '<h5>'+v.firstname+' '+v.lastname+'</h5>';
-	                                row += '<p>'+v.email+'</p>';
+	                                row += '<p><small>'+v.email+'</small></p>';
 	                            row += '</div>';
 	                        row += '</div>';
-	                       
+
                         });
-              
+
                           row += '<div class="row status pull-right">';
-		                        row += '<div class="col-md-3">';             		                          
+		                        row += '<div class="col-md-3">';
 		                                row += '<p>Inne</p>';
-		                        row += '</div>'; 
-	                        row += '</div>';   
-                        row += '</div>'; 
+		                        row += '</div>';
+	                        row += '</div>';
+                        row += '</div>';
                      row += '</div>';
                  row += '</div>';
-            row += '</div>';     
+            row += '</div>';
 		});
-		
+
 		$('.append').html(row);
 
 		$('.autoplay').slick({

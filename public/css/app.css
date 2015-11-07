@@ -1,18 +1,10 @@
 body {
   background: #8B15F3; }
 
-.header {
-  background: #000; }
-  .header h1 {
-    color: #FFEC00;
-    padding: 0.6em 0em 0.1em 0em;
-    font-weight: 200;
-    font-size: 4em; }
-  .header h4 {
-    font-weight: 100;
-    color: #FFEC00;
-    font-size: 2em;
-    padding-bottom: 1em; }
+p {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .content h1 {
   font-weight: 100;
@@ -30,31 +22,35 @@ body {
 .muted-text {
   color: #9B9B9B; }
 
-.preview {
+.card {
   background: #fff;
   border-radius: 10px;
   margin-top: 1em;
   min-height: 97vh;
   box-shadow: 3px 3px 2px 0px black; }
-  .preview .user {
-    margin-bottom: 15px; }
-  .preview .fact {
-    margin-top: 9px; }
-  .preview img {
-    padding: 0;
-    width: 100%;
+  .card .header-pic {
     border-radius: 10px 10px 0 0; }
-  .preview h5 {
+  .card .user {
+    margin-bottom: 15px; }
+  .card .fact {
+    margin-top: 9px; }
+  .card img {
+    padding: 0;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
     margin: auto; }
-  .preview .pic {
+  .card h5 {
+    margin: auto; }
+  .card .pic {
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%); }
-  .preview .status {
+  .card .status {
     position: absolute;
     bottom: 10px;
     left: 290px; }
 
 .info {
-  padding: 0.5em 1.5em 0.5em 1.5em; }
+  padding: .5em 1.5em .5em 1.5em; }
 
 /*# sourceMappingURL=app.css.map */
