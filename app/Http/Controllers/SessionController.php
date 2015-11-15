@@ -68,23 +68,22 @@ class SessionController extends Controller
                         return $this->result->generateApiSuccess($user, "login_facebook", response(200));
                     }
                 }
-                
+
                 //User does not exist in our db, create one in our db
                 $token = sha1(str_random(30));
                 $data = [
-                    "firstname" => $facebook_user["first_name"],
+                    'firstname' => $facebook_user["first_name"],
                     'email' => $facebook_user["email"],
                     'lastname' => $facebook_user["last_name"],
                     'facebook_id' => $facebook_user["id"],
                     'token' => $token,
-                    'device_token' => $deviceToken
+                    'device_token' => $deviceToken,
+                    'profile_image' => $facebook_user["profile_image"]
                 ];
 
                 $user_create = User::create($data);
-
                 if($user_create)
                 {
-                   
                     return $this->result->generateApiSuccess($user_create, "login_facebook", response(202));
                 }
                 return $this->result->generateApiError(response(401), "error");
