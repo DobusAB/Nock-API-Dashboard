@@ -46,7 +46,7 @@ class SessionController extends Controller
             $fb->setDefaultAccessToken($access_token);
 
             try {
-                $response = $fb->get('/me?fields=id,name,email,first_name,last_name');
+                $response = $fb->get('/me?fields=id,name,email,first_name,last_name,picture');
             } catch (Facebook\Exceptions\FacebookSDKException $e) {
                 dd($e->getMessage());
             }
@@ -78,7 +78,7 @@ class SessionController extends Controller
                     'facebook_id' => $facebook_user["id"],
                     'token' => $token,
                     'device_token' => $deviceToken,
-                    'profile_image' => $facebook_user["profile_image"]
+                    'profile_image' => $facebook_user["picture"]["data"]["url"]
                 ];
 
                 $user_create = User::create($data);
