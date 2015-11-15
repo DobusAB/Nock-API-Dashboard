@@ -68,8 +68,6 @@ class SessionController extends Controller
                         return $this->result->generateApiSuccess($user, "login_facebook", response(200));
                     }
                 }
-            
-                return var_dump($facebook_user);
                 
                 //User does not exist in our db, create one in our db
                 $token = sha1(str_random(30));
