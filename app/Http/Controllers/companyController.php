@@ -126,7 +126,9 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        $company = Company::with('users', 'office')->whereId($id)->first(); 
+        
+        $company = Company::with('users')->whereId($id)->first();
+        
         if($company)
         {
             return $this->result->generateApiSuccess($company, "get_company", response(200));
