@@ -211,23 +211,24 @@ class UserController extends Controller
     public function nocking($id)
     {
 
-        $company = Company::with('users')->whereId($id)->first(); 
+        $company = Company::with('users')->whereId($id)->first();
 
         foreach($company->users as $key => $val)
         {
             ///* OBS!! Funkar ej men -> Detta bör användas i framtiden för att inte skicka till parse om devicetoken inte finns
             /*if (isset($val->device_token))
             {*/
-            $data = array("alert" => "Du har besök. Dra för att svara!");
-            $query = ParseInstallation::query();
-            $query->equalTo("deviceToken", $val->device_token);
-            ParsePush::send(array(
-                "where" => $query,
-                "data" => $data
-            ));
+            if isset($val->status){
+                $data = array("alert" => "Du har besök. Dra för att svara!");
+                $query = ParseInstallation::query();
+                $query->equalTo("deviceToken", $val->device_token);
+                ParsePush::send(array(
+                    "where" => $query,
+                    "data" => $data
+                ));
+            }
             //}
         }
-
         
         return $id;
     }
