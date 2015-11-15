@@ -215,13 +215,16 @@ class UserController extends Controller
 
         foreach($company->users as $key => $val)
         {
-            $data = array("alert" => "Du har besök. Dra för att svara!");
-            $query = ParseInstallation::query();
-            $query->equalTo("deviceToken", $val->device_token);
-            ParsePush::send(array(
-                "where" => $query,
-                "data" => $data
-            ));
+            if (!isset($val->device_token))
+            {
+                $data = array("alert" => "Du har besök. Dra för att svara!");
+                $query = ParseInstallation::query();
+                $query->equalTo("deviceToken", $val->device_token);
+                ParsePush::send(array(
+                    "where" => $query,
+                    "data" => $data
+                ));
+            }
         }
 
         

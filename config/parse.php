@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'app_id' =>  env('PARSE_APIKEY', ''),
+    'app_id' =>  env('PARSE_APIKEY', 'Kz4LL3tKVzKUPkSdOn992yKY7OLjQltQB5H74NFG'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'rest_key' =>  env('PARSE_REST', ''),
+    'rest_key' =>  env('PARSE_REST', 'vmrzUPjOtUJhiza3yaxyR3oChHNuUYF8zkSwiG6m'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +42,6 @@ return [
     |
     */
 
-    'master_key' =>  env('PARSE_MASTER', ''),
+    'master_key' =>  env('PARSE_MASTER', '8aD9CTgSVyyEfseguQPSj5jy6BnloHt8qpmMQ6iM'),
 
 ];
