@@ -37,8 +37,6 @@ class SessionController extends Controller
      */
     public function create(Request $request, \SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb)
     {
-        
-
         $request_token = $request->get('token');
         $deviceToken = $request->get('device_token');
         if($request_token)
@@ -71,9 +69,10 @@ class SessionController extends Controller
                     }
                 }
             
-
+                return var_dump($facebook_user);
+                
+                //User does not exist in our db, create one in our db
                 $token = sha1(str_random(30));
-
                 $data = [
                     "firstname" => $facebook_user["first_name"],
                     'email' => $facebook_user["email"],
