@@ -61,7 +61,7 @@ class SessionController extends Controller
                 if($exists)
                 {
                     $user = User::whereFacebookId($id)->first();
-                    $update_user = User::whereId($user->id)->update(['device_token' => $deviceToken]);
+                    $update_user = User::whereId($user->id)->update(['device_token' => $deviceToken, 'profile_image' => $facebook_user["picture"]["url"]]);
 
                     if($update_user)
                     {
@@ -78,9 +78,8 @@ class SessionController extends Controller
                     'facebook_id' => $facebook_user["id"],
                     'token' => $token,
                     'device_token' => $deviceToken,
-                    'profile_image' => $facebook_user["picture"]["data"]["url"]
+                    'profile_image' => $facebook_user["picture"]["url"]
                 ];
-
                 $user_create = User::create($data);
                 if($user_create)
                 {
