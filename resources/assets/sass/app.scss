@@ -10,6 +10,16 @@ p {
 		font-weight: 100;
 		font-size:4em;
 	}
+	h2 {
+	  font-size: 3.0vw;
+	}
+	h5 {
+	  font-size: 1.0vw;
+	}
+	p {
+	  font-size: 1.0vw;
+	  //word-break:break-all;
+	}
 	h1:after{
 		content: " ";
 		display:block;
@@ -41,6 +51,7 @@ p {
 	.fact {
 
 		margin-top: 9px;
+		margin-left: -15px;
 
 	}
 	img{
@@ -65,7 +76,18 @@ p {
 
 	    position:absolute;
 	    bottom: 10px;
-	    left: 290px;
+	    left: 80%;
+	}
+	.out {
+
+		color: #A8A8A8;
+
+	}
+
+	.in {
+
+		color:#28C41A;
+
 	}
 }
 .info{

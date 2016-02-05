@@ -10,6 +10,15 @@ p {
   font-weight: 100;
   font-size: 4em; }
 
+.content h2 {
+  font-size: 3.0vw; }
+
+.content h5 {
+  font-size: 1.0vw; }
+
+.content p {
+  font-size: 1.0vw; }
+
 .content h1:after {
   content: " ";
   display: block;
@@ -33,7 +42,8 @@ p {
   .card .user {
     margin-bottom: 15px; }
   .card .fact {
-    margin-top: 9px; }
+    margin-top: 9px;
+    margin-left: -15px; }
   .card img {
     padding: 0;
     max-width: 100%;
@@ -48,7 +58,11 @@ p {
   .card .status {
     position: absolute;
     bottom: 10px;
-    left: 290px; }
+    left: 80%; }
+  .card .out {
+    color: #A8A8A8; }
+  .card .in {
+    color: #28C41A; }
 
 .info {
   padding: .5em 1.5em .5em 1.5em; }
