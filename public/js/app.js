@@ -59,7 +59,7 @@ function getCompanies(){
 		$('.autoplay').slick({
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
-		  autoplay: false,
+		  autoplay: true,
 		  autoplaySpeed: 1000,
 		  settings: 'unslick',
 		  arrows:false,
